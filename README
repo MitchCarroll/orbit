@@ -1,1 +1,12 @@
-Ok, eventually, I want to write an orbital navigation package. It should be portable and simple. more to come.
+Ok, this is intended to eventually be a suite of astrogation utilities, libraries, and maybe even a nice GUI.
+It's going to be chaotic for a bit until I get all of the algorithms and whatnot collected up, and drum up a list of tasks, and standards and such.
+I really want to keep it simple. should be fairly easily embedable if possible. standard UNIX design philosophy. lots of small tools that do one thing well, etc.
+
+at the moment, here's what i think i need for now:
+
+astrogational almanac         -	   a set of useful constants and such stored in a simple text format that can easily be updated.
+optical position plotting     -	   a utility that takes input in the form of angles relative to the observation platform, and builds a current position in cartesian coordinates.
+initial orbit determination   -	   a utility that takes a limited set of position plots, and generates in initial estimate for your current orbit
+orbit determination refinement-	   a utility that takes an initial orbit estimate, and refines if with new data, hopefully converging on an accurate determination
+porkchop plot	    	      -	   a utility that takes two separate orbits, and generates a graph of predicted time and delta v requirements to effect a rendezvous
+delta v	 		      -	   a utility that takes an initial orbit and a target orbit, and optionally a time constraint, and outputs the optimal thrust vector and delta v
